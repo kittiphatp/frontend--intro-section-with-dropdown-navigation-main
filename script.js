@@ -14,7 +14,7 @@ btnFeature.addEventListener('click', (e) => {
 
     if (ckFeatureActive!="active") {
         btnFeature.childNodes[5].classList.add('active');
-        arrowFeature.src = "/images/icon-arrow-up.svg";
+        arrowFeature.src = "./images/icon-arrow-up.svg";
 
 
         // POP-UP SUBMENU FOR MOBILE
@@ -24,7 +24,7 @@ btnFeature.addEventListener('click', (e) => {
 
     } else {
         btnFeature.childNodes[5].classList.remove('active');
-        arrowFeature.src = "/images/icon-arrow-down.svg";
+        arrowFeature.src = "./images/icon-arrow-down.svg";
 
         // POP-UP SUBMENU FOR MOBILE
         if(currentSubMenuForMobile <= 375)  {
@@ -43,7 +43,7 @@ btnCompany.addEventListener('click', (e) => {
     
     if (ckCompanyActive!="active") {
         btnCompany.childNodes[5].classList.add('active')
-        arrowCompany.src = "/images/icon-arrow-up.svg"
+        arrowCompany.src = "./images/icon-arrow-up.svg"
 
         // POP-UP SUBMENU FOR MOBILE
         if(currentSubMenuForMobile <= 375) {
@@ -52,7 +52,7 @@ btnCompany.addEventListener('click', (e) => {
 
     } else {
         btnCompany.childNodes[5].classList.remove('active');
-        arrowCompany.src = "/images/icon-arrow-down.svg"
+        arrowCompany.src = "./images/icon-arrow-down.svg"
 
          // POP-UP SUBMENU FOR MOBILE
          if(currentSubMenuForMobile <= 375)  {
@@ -71,14 +71,14 @@ let ckHam = 0;
 hamMenu.addEventListener('click', () => {
     
     if(ckHam == 0) {
-        hamMenu.src = "/images/icon-close-menu.svg";
+        hamMenu.src = "./images/icon-close-menu.svg";
         let navMenu = document.querySelector('menu')
         navMenu.classList.add('active');
         navMenu.nextElementSibling.style.display = 'inline-block';
 
         ckHam++
     } else {
-        hamMenu.src = "/images/icon-menu.svg";
+        hamMenu.src = "./images/icon-menu.svg";
         let navMenu = document.querySelector('menu')
         navMenu.classList.remove('active');
         navMenu.nextElementSibling.style.display = 'none';
@@ -98,7 +98,7 @@ addEventListener('resize', (e) => {
         authenMenu.style.display = 'block';
         // console.log(`width: ${currentSrcWidth} and ckHam = ${ckHam}`);
     } else if (currentSrcWidth > 375 && ckHam == 1) {
-        hamMenu.src = "/images/icon-menu.svg";
+        hamMenu.src = "./images/icon-menu.svg";
         let navMenu = document.querySelector('menu')
         navMenu.classList.remove('active');
         authenMenu.style.display = 'inline-block';
@@ -107,7 +107,7 @@ addEventListener('resize', (e) => {
         authenMenu.style.display = 'none';
         // console.log(`width: ${currentSrcWidth} and ckHam = ${ckHam}`);
     } else if (currentSrcWidth <= 375 && ckHam == 1) {
-        hamMenu.src = "/images/icon-menu.svg";
+        hamMenu.src = "./images/icon-menu.svg";
         let navMenu = document.querySelector('menu')
         navMenu.classList.remove('active');
         authenMenu.style.display = 'none';
@@ -116,10 +116,10 @@ addEventListener('resize', (e) => {
 
     // Disable pop-up when there're resize screen
     btnFeature.childNodes[5].classList.remove('active');
-    arrowFeature.src = "/images/icon-arrow-down.svg";
+    arrowFeature.src = "./images/icon-arrow-down.svg";
     btnFeature.style.height = '38px';
     btnCompany.childNodes[5].classList.remove('active');
-    arrowCompany.src = "/images/icon-arrow-down.svg";
+    arrowCompany.src = "./images/icon-arrow-down.svg";
     btnCompany.style.height = '38px';
 
     if(currentSrcWidth > 375) {
