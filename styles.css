@@ -26,7 +26,6 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    overflow-y: hidden;
     background-color: var(--Almost-White);
 }
 
@@ -132,6 +131,9 @@ nav .authen ul li:last-child {
     border-radius: 10px;;
 }
 
+.ham {
+    display: none;
+}
 
 /* MAIN */
 main {
@@ -223,8 +225,6 @@ main > figure {
 
 
 
-
-
 /* SUB-MENU */
 /* FEATURE SUB-MENU */
 nav menu ul li.feature {
@@ -291,4 +291,212 @@ nav menu ul li.company {
 /* SHOW SUB-MENU */
 .active {
     display: block;
+}
+
+
+
+
+
+
+
+
+/* MOBILE APPLICATION 375PX */
+@media (max-width: 375px) {
+
+    /* SETUP MIN-WIDTH */
+    section, nav, main article {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* SETUP MOBILE LAYOUT */
+    body {
+        margin: 0;
+        padding: 0;
+        min-width: 350px;
+        max-width: 350px;
+        min-height: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    section {
+        width: 100%;
+        max-height: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        margin-bottom: 0px;
+        width: 100%;
+    }
+    nav > figure {
+        margin-left: 10px;
+        width: 100px;
+    }
+
+    .ham {
+        width: 50px;
+        display: block;
+        z-index: 99;
+    }
+
+
+    main {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    main > figure {
+        width: 100%;
+        height: 60%;
+        background-image: url(./images/image-hero-mobile.png);
+        background-size: contain;   
+    }
+    
+    main article {
+        margin-top: 0px;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    main article > .gr-article {
+        margin-bottom: 20px;;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    main article > .gr-article > .topic {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    main article > .gr-article > .detail {
+        width: 100%;
+        text-align: center;
+    }
+
+    main article figure.biz-icon {
+        width: 90%;
+    }
+
+    .attribution { 
+        text-align: center;
+        font-size: 0.5em;
+    }
+
+    /* SLIDE MENU */
+    /* MOBILE GENERAL MENU */
+    nav menu {
+        width: 60%;
+        height: 100vh;
+        background-color: var(--Almost-White);
+        display: flex;
+        align-items: flex-start;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+
+        display: none;
+    }
+
+    nav menu::after {
+        content: '';
+        width: 40%;
+        height: 100vh;
+        background-color: rgba(0,0,0,.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    nav menu ul {
+        margin-top: 100px;
+        width: 100%;
+        /* height: 45vh; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav menu ul li {
+        padding: 10px;
+    }
+
+
+    /* MOBiLE AUTHEN MENU */
+    nav > .authen {
+        width: 60%;
+        /* position: fixed;
+        top: 0px;
+        right: 0px; */
+        position:relative;
+        display: none;
+    }
+
+    nav .authen ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        
+        position: absolute;
+        top: 80vh;
+        right: -40px;
+    }
+
+    nav .authen ul li {
+        width: 90%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    
+    /* MOBILE SUB-MENU */
+    /* FEATURE SUB-MENU */
+    nav menu ul li.feature {
+        /* height: 0px; */
+        display: block; 
+    }
+
+    .wrap-feature {
+        margin-top: 20px;
+        margin-left: 40px;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+        display: none;
+    }
+
+    /* COMPANY SUB-MENU */
+    nav menu ul li.company {
+        /* height: 10px; */
+        display: block;
+    }
+    
+    
+    .wrap-company {
+        margin-top: 20px;
+        width: 120px;
+        background-color: transparent;
+        box-shadow: none;
+        display: none;
+    }
+
+
+    /* SHOW HAM-MENU */
+    .active {
+        display: block;
+    }
 }
